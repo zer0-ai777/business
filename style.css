@@ -1,0 +1,275 @@
+/* GLOBAL STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Press Start 2P', cursive;
+    image-rendering: pixelated; /* Ensures pixel art remains crisp */
+}
+
+body {
+    background-color: #1a1a1a;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* GAME CONTAINER */
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 900px;
+    margin: auto;
+    border: 4px solid #ffd700;
+    padding: 20px;
+    background: linear-gradient(135deg, #222, #444);
+    box-shadow: 5px 5px 0px #ffd700, 10px 10px 0px #333;
+    border-radius: 10px;
+}
+
+/* PIXEL BUTTONS */
+.button {
+    background-color: #ffd700;
+    color: #000;
+    border: 4px solid #000;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.1s ease-in-out;
+    box-shadow: 4px 4px 0px #000;
+}
+
+.button:hover {
+    transform: scale(1.1);
+}
+
+.button:active {
+    transform: scale(0.95);
+}
+
+/* MONEY DISPLAY */
+.money-display {
+    font-size: 24px;
+    padding: 15px;
+    background: #111;
+    border: 4px solid #ffd700;
+    display: inline-block;
+    border-radius: 8px;
+    box-shadow: 3px 3px 0px #000;
+}
+
+/* STOCK MARKET */
+.stock-market {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.stock {
+    background: #222;
+    padding: 10px;
+    border: 3px solid #ffd700;
+    box-shadow: 3px 3px 0px #000;
+    font-size: 14px;
+}
+
+.stock.up {
+    color: #0f0;
+    font-weight: bold;
+}
+
+.stock.down {
+    color: #f00;
+    font-weight: bold;
+}
+
+/* PROPERTY MANAGEMENT */
+.real-estate-market, .player-properties {
+    margin-top: 20px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    border: 2px solid #ffd700;
+    box-shadow: 2px 2px 0px #000;
+}
+
+.property-item {
+    padding: 10px;
+    background: #333;
+    border-bottom: 2px solid #ffd700;
+}
+
+.owned-property {
+    background: #228B22;
+    padding: 10px;
+    font-weight: bold;
+}
+
+/* BANKING SYSTEM */
+.bank-account {
+    margin-top: 20px;
+    padding: 15px;
+    background: #0a0a0a;
+    border: 3px solid #00bfff;
+    border-radius: 8px;
+    font-size: 18px;
+}
+
+/* EVENTS & NOTIFICATIONS */
+.event-log {
+    margin-top: 20px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    max-height: 200px;
+    overflow-y: auto;
+    border: 2px solid #ff4500;
+    color: #ff4500;
+    text-align: left;
+}
+
+/* PIXEL ART UI */
+.pixel-window {
+    width: 300px;
+    height: 200px;
+    background: #222;
+    border: 5px solid #ffd700;
+    padding: 10px;
+    position: relative;
+    box-shadow: 5px 5px 0px #000;
+}
+
+.pixel-title {
+    background: #ffd700;
+    color: #000;
+    font-weight: bold;
+    padding: 5px;
+    border-bottom: 4px solid #000;
+}
+
+/* SHOP UI */
+.shop-container {
+    margin-top: 20px;
+    background: #333;
+    padding: 10px;
+    border-radius: 8px;
+    border: 3px solid #ffd700;
+    box-shadow: 3px 3px 0px #000;
+}
+
+.shop-item {
+    padding: 10px;
+    border-bottom: 2px solid #ffd700;
+}
+
+.shop-item button {
+    margin-top: 5px;
+}
+/* 💰 Purchase Notification */
+.purchase-notification {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #0a0;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* 💹 Smooth Stock Price Changes */
+.stock {
+    transition: background-color 0.5s, transform 0.3s;
+}
+
+.stock.up {
+    background-color: rgba(0, 255, 0, 0.3);
+    transform: scale(1.05);
+}
+
+.stock.down {
+    background-color: rgba(255, 0, 0, 0.3);
+    transform: scale(0.95);
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 40px auto;
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.1);
+}
+
+h1, h2 {
+    color: #f1c40f;
+}
+
+.stock-item {
+    background: #333;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.stock-item:hover {
+    background: #444;
+}
+
+button {
+    background: #27ae60;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #2ecc71;
+}
+
+.purchase-notification {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #0a0;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.stock.up {
+    background-color: rgba(0, 255, 0, 0.3);
+    transform: scale(1.05);
+}
+
+.stock.down {
+    background-color: rgba(255, 0, 0, 0.3);
+    transform: scale(0.95);
+}

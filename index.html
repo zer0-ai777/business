@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Tycoon</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>💼 Business Tycoon</h1>
+        <p>Current Balance: <span id="money-display">$10,000.00</span></p>
+
+        <h2>📈 Stock Market</h2>
+        <div id="stocks">
+            <div class="stock-item" onclick="buyStock('AAPL')">
+                Apple (AAPL): <span id="stock-AAPL">$150.00</span>
+            </div>
+            <div class="stock-item" onclick="buyStock('TSLA')">
+                Tesla (TSLA): <span id="stock-TSLA">$750.00</span>
+            </div>
+            <div class="stock-item" onclick="buyStock('AMZN')">
+                Amazon (AMZN): <span id="stock-AMZN">$3200.00</span>
+            </div>
+            <div class="stock-item" onclick="buyStock('GOOGL')">
+                Google (GOOGL): <span id="stock-GOOGL">$2800.00</span>
+            </div>
+        </div>
+
+        <h2>🏪 Store</h2>
+        <button onclick="buyItem('Small Office', 5000)">Buy Small Office ($5000)</button>
+        <button onclick="buyItem('Employee Hire', 2000)">Hire Employee ($2000)</button>
+        <button onclick="buyItem('Marketing Boost', 3000)">Buy Marketing ($3000)</button>
+
+        <h2>🎒 Inventory</h2>
+        <ul id="inventory-list"></ul>
+    </div>
+
+    <script src="main.js"></script>
+    <script src="gameLogic.js"></script>
+    <script src="animations.js"></script>
+</body>
+</html>
